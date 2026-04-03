@@ -28,13 +28,28 @@ for (let piattaforma in vendite) {
 }
 
 /*ACQUISTI */
-acquisti.forEach(item => {
-  const card = document.createElement("div");
-  card.classList.add("card");
+for (let piattaforma in acquisti) {
+  const div = document.createElement("div");
+  div.classList.add("platform");
 
-  card.innerHTML = `
-    ${item.nome} - ${item.persona}
-  `;
+  const title = document.createElement("h3");
+  title.textContent = piattaforma;
 
-  acquistiContainer.appendChild(card);
+  div.appendChild(title);
+
+  vendite[piattaforma].forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+      <a href="${item.link}" target="_blank">
+        ${item.nome} - ${item.persona}
+      </a>
+    `;
+
+    div.appendChild(card);
+  });
+
+  venditeContainer.appendChild(div);
+}
 });
