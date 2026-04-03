@@ -1,9 +1,7 @@
 const venditeContainer = document.getElementById("vendite-container");
 const acquistiContainer = document.getElementById("acquisti-container");
 
-/* =======================
-   VENDITE
-======================= */
+/* VENDITE */
 for (let piattaforma in vendite) {
   const div = document.createElement("div");
   div.classList.add("platform");
@@ -17,47 +15,26 @@ for (let piattaforma in vendite) {
     const card = document.createElement("div");
     card.classList.add("card");
 
-    const text =
-      (item.nome && item.nome.trim() !== "")
-        ? item.nome
-        : (item.persona || "Senza nome");
+    card.innerHTML = `
+      <a href="${item.link}" target="_blank">
+        ${item.nome} - ${item.persona}
+      </a>
+    `;
 
-    const link = item.link || "#";
-
-    const a = document.createElement("a");
-    a.href = link;
-    a.target = "_blank";
-    a.title = link;
-
-    a.textContent = `${text} - ${item.persona}`;
-
-    card.appendChild(a);
     div.appendChild(card);
   });
 
   venditeContainer.appendChild(div);
 }
 
-/* =======================
-   ACQUISTI
-======================= */
+/*ACQUISTI */
 acquisti.forEach(item => {
   const card = document.createElement("div");
   card.classList.add("card");
 
-  const text =
-    (item.nome && item.nome.trim() !== "")
-      ? item.nome
-      : (item.persona || "Senza nome");
+  card.innerHTML = `
+    ${item.nome} - ${item.persona}
+  `;
 
-  const link = item.link || "#";
-
-  const a = document.createElement("a");
-  a.href = link;
-  a.target = "_blank";
-  a.title = link;
-  a.textContent = `${text} - ${item.persona}`;
-
-  card.appendChild(a);
   acquistiContainer.appendChild(card);
 });
