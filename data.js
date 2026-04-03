@@ -1,20 +1,229 @@
 const vendite = {
-  "Subito": [
-    { nome: "Samsung Galaxy S5", persona: "Giuseppe", link: "https://www.subito.it/" },
-    { nome: "Samsung Gear VR", persona: "Gino", link: "https://www.subito.it/" }
+  "eBay": [
+    {
+      nome: "eBay",
+      persona: "",
+      link: "https://feedback.ebay.it/ws/eBayISAPI.dll?ViewFeedback2&userid=sh0ck83"
+    }
   ],
 
-  "Vinted": [
-    { nome: "Jeans uomo", persona: "Luca", link: "#" },
-    { nome: "Apple Pencil USB-C", persona: "Andrea", link: "#" }
-  ],
+  "Hardware Upgrade": [
+    { nome: "Twinmos Dual Channel Kit 2x512mb CL2.5 DDR400", persona: "Mo3bius", link: "http://www.hwupgrade.it/forum/member.php?userid=33846" },
+    { nome: "Sapphire 9500 128 256Bit", persona: "teddyvs", link: "http://www.hwupgrade.it/forum/member.php?u=59293" },
+    { nome: null, persona: "m@ximo", link: "http://www.hwupgrade.it/forum/member.php?userid=59209" },
+    { nome: "Sapphire 9800 Pro@XT", persona: "beppe", link: "http://www.hwupgrade.it/forum/member.php?userid=1940" },
+    { nome: null, persona: "True modder", link: "http://www.hwupgrade.it/forum/member.php?userid=89894" },
+    { nome: null, persona: "pippokennedy", link: "http://www.hwupgrade.it/forum/member.php?userid=74202" },
+    { nome: null, persona: "Andrewu", link: "http://www.hwupgrade.it/forum/member.php?userid=61557" },
+    { nome: null, persona: "Gianchik", link: "http://www.hwupgrade.it/forum/member.php?userid=103533" },
+    { nome: null, persona: "jok3r87", link: "http://www.hwupgrade.it/forum/member.php?userid=119331" },
+    { nome: "Pinnacle PCTV Rave", persona: "GIGICOMO", link: "http://www.hwupgrade.it/forum/member.php?userid=204079" },
+    { nome: "Zalman CNPS9500", persona: "robirisi", link: "http://www.hwupgrade.it/forum/member.php?u=132110" },
+    { nome: "Club3D X1950PRO AGP 256MB", persona: "nidecker", link: "http://www.hwupgrade.it/forum/member.php?u=82711" },
+    { nome: "Intel Pentium Dual Core E2140 BOX", persona: "giukey", link: "http://www.hwupgrade.it/forum/member.php?u=243504" },
+    { nome: "2xSeagate Cheetah Ultra320 36Gb SCSI ST336607LW", persona: "falconfab", link: "http://www.hwupgrade.it/forum/member.php?u=232375" },
+    { nome: null, persona: "Luca.81", link: "http://www.hwupgrade.it/forum/member.php?u=158934" },
+    { nome: "Arctic Accelero S1", persona: "Parappaman", link: "http://www.hwupgrade.it/forum/member.php?u=220269" },
+    { nome: "Noctua NF-P12", persona: "diavoletto88", link: "http://www.hwupgrade.it/forum/member.php?u=244578" },
+    { nome: "Sapphire HD3850 512MB GDDR3", persona: "Alexanderdavice", link: "http://www.hwupgrade.it/forum/member.php?u=228566" },
+    { nome: "GIGABYTE P55A-UD5", persona: "simocan", link: "http://www.hwupgrade.it/forum/member.php?u=436892" },
+    { nome: "LG Nexus 5 32GB", persona: "che2pallet", link: "http://www.hwupgrade.it/forum/member.php?u=72788" },
+    { nome: "ZOTAC GTX 680 2GB", persona: "BadBoyz", link: "http://www.hwupgrade.it/forum/member.php?u=456392" },
+    { nome: "Delock Adapter SlimPort / MyDP male > HDMI female + USB micro-B female", persona: "Rimskij", link: "http://www.hwupgrade.it/forum/member.php?u=419579" },
+    { nome: "Samsung 850 Pro 256Gb", persona: "Fabrizio", link: "http://www.hwupgrade.it/forum/member.php?u=198936" },
+    { nome: null, persona: "Genocide85", link: "http://www.hwupgrade.it/forum/member.php?userid=34870" },
+    { nome: null, persona: "ld1984", link: "http://www.hwupgrade.it/forum/member.php?userid=12391" },
+    { nome: null, persona: "Chicco85", link: "http://www.hwupgrade.it/forum/member.php?userid=86582" },
+    { nome: null, persona: "Klintf", link: "http://www.hwupgrade.it/forum/member.php?userid=123591" },
+    { nome: null, persona: "skywalker77", link: "http://www.hwupgrade.it/forum/member.php?userid=32347" },
+    { nome: null, persona: "Kukuzza", link: "http://www.hwupgrade.it/forum/member.php?userid=43216" },
+    { nome: "SONY Trinitron 19'' Multiscan E430", persona: "madluke", link: "http://www.hwupgrade.it/forum/member.php?userid=105341" },
+    { nome: null, persona: "lucaman", link: "http://www.hwupgrade.it/forum/member.php?userid=42549" }
+],
+
+"Subito": [
+    { nome: "Samsung Galaxy Nexus", persona: "Stefano G.", link: "http://www.subito.it" },
+    { nome: "Samsung Galaxy S5", persona: "Giuseppe", link: "http://www.subito.it/" },
+    { nome: "Autoradio MP3/WMA Blaupunkt Sanremo MP26 180W", persona: "Lorenzo", link: "http://www.subito.it/" },
+    { nome: "Runtastic RUNBT1 Heart Rate Monitor Bluetooth", persona: "Alessandro", link: "http://www.subito.it/" },
+    { nome: "Z97-Deluxe + i5 4690 + Corsair Vengeance 16GB 1866Mhz", persona: "Daniele", link: "http://www.subito.it/" },
+    { nome: "Samsung Gear VR", persona: "Gino", link: "http://www.subito.it/" },
+    { nome: "Stagg SW203 Black", persona: "Andrea", link: "http://www.subito.it" },
+    { nome: "Dissipatore CPU Thermalright Ultra 120 Extreme", persona: "Stefano", link: "http://www.subito.it/" },
+    { nome: "Casse Creative Labs Cambridge Soundworks per PC", persona: "Alessandro", link: "http://www.subito.it/" },
+    { nome: "Casio CTK-1250K2 Tastiera Elettronica", persona: "Stefano", link: "http://www.subito.it/" },
+    { nome: "Case Chieftec LCX 01 BB SL Midi Tower", persona: "Vincenzo", link: "https://www.subito.it/utente/4115841" },
+    { nome: "Royaltek GPS receiver Bluetooth RBT-2200", persona: "Maurizio", link: "https://www.subito.it/utente/103204428" },
+    { nome: "2x Y.S.TECH FD129225LB 0.15A", persona: "Marco", link: "https://www.subito.it/utente/4254173" },
+    { nome: "Technicolor TG789vac v2 + Samsung Galaxy Nexus Vehicle Dock", persona: "Morfeo", link: "https://www.subito.it/utente/18288330" },
+    { nome: "TP-LINK Powerline AV500 Wireless N 300Mbps", persona: "Carmelo", link: "https://www.subito.it/utente/109011427" },
+    { nome: "Samsung Galaxy S9 64GB Midnight Black", persona: "Williams", link: "https://www.subito.it/utente/12480582" },
+    { nome: "Microcassette Panasonic RT-602MC MC-60", persona: "Paola", link: "https://www.subito.it/utente/103947069" },
+    { nome: "Sony Microcassette Recorder M-527V VOR", persona: "Andrea", link: "https://www.subito.it/utente/21388635" },
+    { nome: "Navigatore Garmin Nuvi 1250", persona: "Marco", link: "https://www.subito.it/utente/2065137" },
+    { nome: "LG Nexus 5X 32GB", persona: "Samuele", link: "https://www.subito.it/utente/20295365" },
+    { nome: "Misuratore pressione Medel Check 95124", persona: "George", link: "https://www.subito.it/utente/11291270" },
+    { nome: "Controller Dual Shock Sony PSOne + USB", persona: "Federico", link: "https://www.subito.it/utente/100269351" },
+    { nome: "Asus Eee PC 1011CX Netbook", persona: "Sonia", link: "https://www.subito.it/utente/109852813" },
+    { nome: "Samsung Galaxy A70 non funzionante", persona: "Davide", link: "https://www.subito.it/utente/101467115" },
+    { nome: "Scarpe antinfortunistiche Sparco Teamworks t.41", persona: "Corrado", link: "http://wwww.subito.it/" },
+    { nome: "City Bike Cafe Racer", persona: "Murathan", link: "https://www.subito.it/utente/108431536" },
+    { nome: "Heart rate sensor Polar H7", persona: "Claudio", link: "https://www.subito.it/utente/8142338" },
+    { nome: "Custodie SLIM CASE CD/DVD", persona: "Andrea", link: "https://www.subito.it/utente/151235" },
+    { nome: "Pendrive Kingston e Sandisk 8GB", persona: "Ivana", link: "https://www.subito.it/utente/15858828" },
+    { nome: "GeForce RTX 2070 Windforce 8G", persona: "Adriano", link: "https://www.subito.it/utente/2528316" },
+    { nome: "Samsung Galaxy Note GT-N7000 16GB", persona: "Maria Teresa", link: "https://www.subito.it/utente/7086605" },
+    { nome: "Custodie JEWEL CASE BOX CD/DVD", persona: "Nicola", link: "https://www.subito.it/utente/12212803" },
+    { nome: "Custodie JEWEL CASE BOX CD/DVD", persona: "Carmine", link: "https://www.subito.it/utente/113856572" },
+    { nome: "Blocco scheda madre CPU RAM WLAN", persona: "Cristian", link: "https://www.subito.it/utente/106863091" },
+    { nome: "Custodie JEWEL CASE BOX CD/DVD", persona: "Riccardo", link: "https://www.subito.it/utente/11815067" },
+    { nome: "Display Samsung Galaxy S7500 Ace Plus", persona: "Andrea", link: "https://www.subito.it/utente/107874606" },
+    { nome: "Autoradio Sony CDX-S2250S", persona: "Andrea", link: "https://www.subito.it/utente/8592268" },
+    { nome: "Cruscotto centrale Opel Corsa", persona: "Andrea", link: "https://www.subito.it/utente/9778919" },
+    { nome: "TP-Link TL-WR841N Router Wi-Fi 300 Mbps", persona: "Francesco", link: "https://www.subito.it/utente/6710972" },
+    { nome: "Samsung Galaxy S22", persona: "Geraldina", link: "https://www.subito.it/utente/21707893" },
+    { nome: "Samsung Galaxy S23", persona: "Graziano", link: "https://www.subito.it/utente/107451" },
+    { nome: "Philips Blu-ray BDP7500B2/12", persona: "Elio", link: "https://www.subito.it/utente/80519" },
+    { nome: "Batteria Samsung Galaxy S9 EB-BG960ABE", persona: "Sergio", link: "https://www.subito.it/utente/13640830" },
+    { nome: "Nikon Coolpix E5600", persona: "Vania", link: "https://www.subito.it/utente/120593002" },
+    { nome: "Cuffie Zalman ZM-RS6F", persona: "Davide", link: "https://www.subito.it/utente/15771104" },
+    { nome: "Samsung Galaxy S24", persona: "Matteo", link: "https://www.subito.it/utente/16078139" },
+    { nome: "HP ProDesk 400 G3 MiniPC", persona: "Michele", link: "https://www.subito.it/utente/12923960" }
+],
+
+  "PCTuner":[
+    { nome: null, persona: "dovo", link:"http://www.pctuner.net/forum/members/dovo.html"},
+    { nome: null, persona: "commandospirit", link:"http://www.pctuner.net/forum/members/commandospirit.html"}
+],
+
+  "Kijiji":[
+    { nome: "Asus GeForce ROG STRIX-GTX1070-8G-Gaming", persona: "Eduardo", link:"https://www.kijiji.it/"},
+    { nome: "ZOTAC GeForce GTX 1070 Ti AMP! Edition 8GB ZT-P10710C-10P", persona: "Claudio", link:"https://www.kijiji.it/"},
+    { nome: "Assimil German with Ease - Impara il tedesco<", persona: "Eric", link:"https://www.kijiji.it/"}
+],
+    
 
   "Facebook": [
-    { nome: "Playstation 2", persona: "Vincenzo", link: "#" }
+    { nome: "Yamaha P35", persona: "Iulian", link: "https://www.facebook.com/viulianvalentin" },
+    { nome: "Playstation 2", persona: "Vincenzo", link: "https://www.facebook.com/vincenzo.vinvin/" },
+    { nome: "Sercomm VD625 - Smart Modem Tim WIFI per ADSL e FIBRA", persona: "Gino", link: "https://www.facebook.com/gino.squarzanti/" },
+    { nome: "Smartphone ALPS Note 30 Plus", persona: "Khalidou", link: "https://www.facebook.com/khalidou.fadiga" },
+    { nome: "Telecamera Nilox Smart Security FullHD", persona: "Massimo", link: "https://www.facebook.com/khalid.singer.737" },
+    { nome: "Altoparlanti Creative Inspire 5.1 T5100", persona: "Stefano", link: "https://www.facebook.com/stefano.dipaola.5/" },
+    { nome: "Nuovo Gear VR con Controller SM-R325NZVDITV", persona: "Giuseppe", link: "https://www.facebook.com/giuseppe.denucciopapokkia/" },
+    { nome: "Smartphone Samsung Galaxy A3 SM-A300FU", persona: "Sony", link: "https://www.facebook.com/dhillon.sony.503/" },
+    { nome: "Tablet Samsung Galaxy Tab 3G GT-P1000 Bianco", persona: "Antho Ny", link: "https://www.facebook.com/anthony.civitillo/" },
+    { nome: "Computer Dell Optiflex 780 E7500 4GB 250GB Windows 11 Pro", persona: "Giuseppe", link: "https://www.facebook.com/giuseppe.lupoli.39904/" },
+    { nome: "TP-Link TD-W8980 Modem Router Wireless N600", persona: "Roberto", link: "https://www.facebook.com/roberto.gabi.1/" },
+    { nome: "Subwoofer Creative SBS 2.1 360", persona: "Emmanuel", link: "https://www.facebook.com/emmanuel.yaabaya/" },
+    { nome: "Samsung Galaxy S3 16GB 3G GT-I9300", persona: "Michele", link: "https://www.facebook.com/mikele.ascione.5" },
+    { nome: "Monitor Samsung SyncMaster 172V", persona: "Harry", link: "https://www.facebook.com/young.harrym" },
+    { nome: "Casse Mars Gaming Krator N2-20020", persona: "Harry", link: "https://www.facebook.com/young.harrym" },
+    { nome: "Nintendo DS Lite USG-001 Rosso", persona: "Cinzia", link: "https://www.facebook.com/cinzia.aspri" },
+    { nome: "Casco Origine-Helmets Primo Jack Matt Pastel Blue s.55-56", persona: "Arianna", link: "https://www.facebook.com/arianna.mambrin" },
+    { nome: "RAM DDR3 PC3 2x2GB 10600S 1333Mhz Hynix", persona: "Alessio", link: "https://www.facebook.com/alessio.rota.351" },
+    { nome: "Altoparlanti Stereo Logitech S-100 Black", persona: "Dato", link: "https://www.facebook.com/profile.php?id=100074519244928" },
+    { nome: "PC Compaq AMD 3000+ 1GB 2x80GB", persona: "Giacomo", link: "https://www.facebook.com/giacomo.giannelli.94" },
+    { nome: "Lettore CD/DVD/Divx United 4070", persona: "Guglielmo", link: "https://www.facebook.com/grillo.parlerino/" },
+    { nome: "Technicolor TG789vac v2 - Smart Modem Fibra Tim", persona: "Alessandro", link: "https://www.facebook.com/alessandro.angeloni" },
+    { nome: "Casco Jet GIVI. Taglia XS", persona: "Manir", link: "https://www.facebook.com/profile.php?id=100082725057792" }
+],
+
+  "Vinted": [
+    { nome: "Scarpe Puma Women's Cruise Rider Silk Road t.36", persona: "julie-13013", link: "https://www.vinted.it/member/1827844-julie-13013" },
+    { nome: "t-shirt Betty Boop", persona: "robie_honey", link: "https://www.vinted.it/member/21679288-robiehoney" },
+    { nome: "Camicia a fiori Esprit", persona: "poquitojr", link: "https://www.vinted.it/member/26204227-poquitojr" },
+    { nome: "Pantalone pigliama South Park con Eric Cartman", persona: "SHIRLEY", link: "https://www.vinted.it/member/47244590-shirley1404" },
+    { nome: "T-shirt bianca This is Volleyball", persona: "Mario", link: "https://www.vinted.it/member/80693927-mario724" },
+    { nome: "Jeans uomo", persona: "Luca", link: "https://www.vinted.it/member/106049849-sibluc41" },
+    { nome: "Pantalone uomo", persona: "Michela", link: "https://www.vinted.it/member/53815854-mibchi" },
+    { nome: "Pantalone uomo bianco", persona: "Selena", link: "https://www.vinted.it/member/13328942-selenapsr" },
+    { nome: "Adidas Superstar 40 - EG4958", persona: "Sebastian", link: "https://www.vinted.it/member/110861151-seba293976" },
+    { nome: "Caterpillar Cat taglia 38", persona: "Maria", link: "https://www.vinted.it/member/103348023-mariaamor" },
+    { nome: "Giacca camicia Sixty", persona: "julieeeen", link: "https://www.vinted.it/member/26600841-julieeeen" },
+    { nome: "Camicia a fiori", persona: "meeloxxy", link: "https://www.vinted.it/member/28010481-meeloxxy" },
+    { nome: "Jeans premaman elasticizzati", persona: "malika93500", link: "https://www.vinted.it/member/16898759" },
+    { nome: "Jeans elasticizzato con inserti tasche in pailette", persona: "nunziagagliano", link: "https://www.vinted.it/member/90331686-nunziagagliano" },
+    { nome: "Maglione cotone giallo Sergio Tacchini XL", persona: "forti76", link: "https://www.vinted.it/member/21621774-forti76" },
+    { nome: "Maglione lana alpaca unisex Boho handmade", persona: "rubenroots", link: "https://www.vinted.it/member/81400725-rubenroots" },
+    { nome: "Jeans al ginocchio", persona: "frederique1971", link: "https://www.vinted.it/member/13082922-frederique1971" },
+    { nome: "T-shirt bianca volley con stampe color oro", persona: "aleksandraduijs", link: "https://www.vinted.it/member/81806600-aleksandraduijs" },
+    { nome: "T-Shirt Pampling Donkey play with pad Nintendo 8 bit", persona: "lucilefossey", link: "https://www.vinted.it/member/14248304-lucilefossey" },
+    { nome: "Jeans Over-D Taglia 52", persona: "Giulia", link: "https://www.vinted.it/member/82622870-giuliapasetti" },
+    { nome: "Lenzuolo singolo con angoli Thun", persona: "Eva", link: "https://www.vinted.it/member/74729502-evacamilla22" },
+    { nome: "Maglione scaldacuore rosa cipria", persona: "Michela", link: "https://www.vinted.it/member/60995802-mickyny78" },
+    { nome: "Canotta da notte bianca", persona: "Marie", link: "https://www.vinted.it/member/85580889-moy1677" },
+    { nome: "Cardigan donna oro e argento", persona: "Valerie", link: "https://www.vinted.it/member/21332520-victorineggk" },
+    { nome: "Jeans cargo Carhartt", persona: "Simon", link: "https://www.vinted.it/member/14853163-mat353" },
+    { nome: "Cuffie Apple Airpods Pro Wireless 1a Gen. MWP22TY/A", persona: "Domenico", link: "https://www.vinted.it/member/84660712-portex12" },
+    { nome: "Splendido tappeto viola", persona: "Carnen", link: "https://www.vinted.it/member/119177155-giorgino1970" },
+    { nome: "Jeans Rosa Horseshoe", persona: "Marie", link: "https://www.vinted.it/" },
+    { nome: "T-Shirt Uomo/Bambino Errea Nuova con cartellino", persona: "Cris7119", link: "https://www.vinted.it/member/57641334" },
+    { nome: "tre pantaloni", persona: "weemzoom", link: "https://www.vinted.it/member/48960627" },
+    { nome: "T-shirt Basket double-face Champion", persona: "Tuliche", link: "https://www.vinted.it/member/36973685" },
+    { nome: "Maglioncino per Animali domestici di piccola taglia", persona: "Luana", link: "https://www.vinted.it/member/139424061" },
+    { nome: "Scarponcini trekking + cappello lana", persona: "Ida", link: "https://www.vinted.it/member/58074795" },
+    { nome: "Custodia Kindle Paperwhite 2019 J9G29R K658/2019", persona: "Marta", link: "https://www.vinted.it/member/57953854" },
+    { nome: "Pigiama puro cotone", persona: "Teresa", link: "https://www.vinted.it/member/84435319" },
+    { nome: "Ea Sports FC 24 Xbox Serie X Xbox One", persona: "francescomezza", link: "https://www.vinted.it/member/64744949" },
+    { nome: "Pantalone uomo", persona: "Salif Ba", link: "https://www.vinted.it/member/55941629" },
+    { nome: "Borsa Jeans", persona: "Frederique", link: "https://www.vinted.it/member/77976247" },
+    { nome: "Giubbotto con cappuccio e zip lana alpaca pile Boho", persona: "Lorenzo", link: "https://www.vinted.it/member/49615653" },
+    { nome: "Sharp dk-ap7p - sistema per ipod / itouch / iphone", persona: "Simone", link: "https://www.vinted.it/member/54902977" },
+    { nome: "Maglia a maniche lunghe in viscosa", persona: "Francesco", link: "https://www.vinted.it/member/258248761" },
+    { nome: "Maglia a maniche lunghe", persona: "Francesco", link: "https://www.vinted.it/member/258248761" },
+    { nome: "Maglia blusa viola lavanda con scollo a barchetta", persona: "Teresa", link: "https://www.vinted.it/member/90351590" },
+    { nome: "HP ProDesk 400 G4 MiniPc", persona: "zered", link: "https://www.vinted.it/member/37899020-zered2000" },
+    { nome: "Apple Pencil USB-C", persona: "alia2507", link: "https://www.vinted.it/member/24130697" },
+    { nome: "Dell AC511M Soundbar nuova in confezione originale", persona: "Alexander", link: "https://www.vinted.it/member/98004228" },
+    { nome: "Mussola Copertina lenzuolino bimbo bimba puro cotone", persona: "JANNA", link: "https://www.vinted.it/member/57465235" },
+    { nome: "Decoder digitale terrestre Telesystem", persona: "bouhermat", link: "https://www.vinted.it/member/281694921" },
+    { nome: "D-Link DWR932 Mobile Wi-Fi Hotspot 150Mbps N300 4G", persona: "Theys Michel", link: "https://www.vinted.it/member/98004228" },
+    { nome: "Pantalone Pigliama con conigli", persona: "CHRISTIAN", link: "https://www.vinted.it/member/229878202" },
+    { nome: "Maglia maniche lunghe", persona: "Sara", link: "https://www.vinted.it/member/79451823" },
+    { nome: "Cinturino per Xiaomi MI Band 10 9 8", persona: "Andrea", link: "https://www.vinted.it/member/313853158" },
+    { nome: "Parkside Multi-Purpose Detector", persona: "Ariabella", link: "https://www.vinted.it/member/50497145" },
+    { nome: "Camicia bianca Ovs Slim", persona: "Martin", link: "https://www.vinted.it/member/121757929" }
+  ],
+
+  "Wallapop": [
+    { nome: "Google Chromecast HD", persona: "Alberto", link: "https://it.wallapop.com/app/user/albertop-kp61g13yd65l/published" },
+    { nome: "Corsair RM1000x Alimentatore PC", persona: "Cristiano", link: "https://it.wallapop.com/user/christiano-38721773" },
+    { nome: "Dell AC511M Soundbar nuova in confezione originale<", persona: "Blas", link: "https://it.wallapop.com/user/blas-424947560" },
+    { nome: "USB to DB15 Game Port Adapter", persona: "Igor", link: "https://it.wallapop.com/user/igora-305897344" },
+    { nome: "Philips GoGear Vibe 4Gb - Nero", persona: "Martin", link: "https://it.wallapop.com/user/martinr-470403686" }
+    
+  ],
+
+  "Amici": [
+    { nome: "Neewer NW(B-3) 6 Filtro Antipop di Microfono da Studio con Clip di Supporto - Rotondo, Nero", persona: "Alessandro", link: "" },
+    { nome: "Serena - samsung Galaxy s6 + cover + fascia braccio", persona: "Serena", link: "" },
+    { nome: "Samsung Galaxy S8", persona: "Concetta", link: "" },
+    { nome: "Netgear AC600 WiFi USB Adapter 802.11ac Dual Band", persona: "Mary", link: ""}
+    
   ]
 };
 
 const acquisti = [
-  { nome: "Yamaha P35", persona: "Luca" },
-  { nome: "Galaxy S21", persona: "Marco" }
+  { nome: "Yamaha P35", persona: "Luca", link: "http://www.subito.it/" },
+  { nome: "Leap Motion", persona: "Giuseppe", link: "http://www.subito.it/" },
+  { nome: "Galaxy S9", persona: "Luigi", link: "https://www.subito.it/utente/9019561" },
+  { nome: "Galaxy S21", persona: "Marco", link: "https://www.subito.it/utente/17766286" },
+  { nome: "Portabici per auto", persona: "Lucia", link: "https://www.subito.it/utente/107599967" },
+  { nome: "Beethoven Klaviersonaten I & 2", persona: "Giacomo", link: "https://www.subito.it/utente/101132258" },
+  { nome: "Adidas Superstar Bianche", persona: "pissitilli", link: "https://www.vinted.it/member/98136013-pissitilli" },
+  { nome: "Scheda video Gigabyte RTX 3070Ti", persona: "Marco", link: "https://www.facebook.com/marco.pietralunga" },
+  { nome: "Polar OH1", persona: "Fabio", link: "https://www.vinted.it/member/50489996-fabiusp" },
+  { nome: "Yiruma Easy piano concert", persona: "Luana", link: "https://www.vinted.it/member/81812224-luana" },
+  { nome: "Cramer 60 studi scelti + Czerny op.740", persona: "Salvatore", link: "https://www.subito.it/utente/3197812" },
+  { nome: "Spartiti per pianoforte - Einaudi", persona: "Benedetta", link: "https://www.subito.it/utente/100709290" },
+  { nome: "Nokia ACP-7E", persona: "Mauro", link: "https://www.ebay.it/usr/mauro-roma" },
+  { nome: "Apple Pencil USB-C", persona: "boydweersing1996", link: "https://www.vinted.it/member/118173245" },
+  { nome: "Saucony Omni 9", persona: "sauconylife", link: "https://www.vinted.it/member/3142197033" },
+  { nome: "Saucony Omni 9", persona: "zzdz_13", link: "https://www.vinted.it/member/190360874" }
+];
+
+const scambi = [
+  { nome: "Zalman VF900CU Led - UPS Atlantis", persona: "Jim81", link: "http://www.hwupgrade.it/forum/member.php?userid=25776" },
+  { nome: "Galaxy Buds Pro / Apple Airpods Pro", persona: "Giuseppe", link: "https://www.facebook.com/giuseppe.castelli.779" }
 ];
