@@ -102,7 +102,6 @@ const vendite = {
     { nome: "Assimil German with Ease - Impara il tedesco<", persona: "Eric", link:"https://www.kijiji.it/"}
 ],
     
-
   "Facebook": [
     { nome: "Yamaha P35", persona: "Iulian", link: "https://www.facebook.com/viulianvalentin" },
     { nome: "Playstation 2", persona: "Vincenzo", link: "https://www.facebook.com/vincenzo.vinvin/" },
@@ -184,7 +183,7 @@ const vendite = {
     { nome: "Cinturino per Xiaomi MI Band 10 9 8", persona: "Andrea", link: "https://www.vinted.it/member/313853158" },
     { nome: "Parkside Multi-Purpose Detector", persona: "Ariabella", link: "https://www.vinted.it/member/50497145" },
     { nome: "Camicia bianca Ovs Slim", persona: "Martin", link: "https://www.vinted.it/member/121757929" }
-  ],
+],
 
   "Wallapop": [
     { nome: "Google Chromecast HD", persona: "Alberto", link: "https://it.wallapop.com/app/user/albertop-kp61g13yd65l/published" },
@@ -193,7 +192,7 @@ const vendite = {
     { nome: "USB to DB15 Game Port Adapter", persona: "Igor", link: "https://it.wallapop.com/user/igora-305897344" },
     { nome: "Philips GoGear Vibe 4Gb - Nero", persona: "Martin", link: "https://it.wallapop.com/user/martinr-470403686" }
     
-  ],
+],
 
   "Amici": [
     { nome: "Neewer NW(B-3) 6 Filtro Antipop di Microfono da Studio con Clip di Supporto - Rotondo, Nero", persona: "Alessandro", link: "" },
