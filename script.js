@@ -27,29 +27,18 @@ for (let piattaforma in vendite) {
   venditeContainer.appendChild(div);
 }
 
-/*ACQUISTI */
-for (let piattaforma in acquisti) {
-  const div = document.createElement("div");
-  div.classList.add("platform");
+/* ACQUISTI */
+const acquistiContainer = document.getElementById("acquisti-container");
 
-  const title = document.createElement("h3");
-  title.textContent = piattaforma;
+acquisti.forEach(item => {
+  const card = document.createElement("div");
+  card.classList.add("card");
 
-  div.appendChild(title);
+  card.innerHTML = `
+    <a href="${item.link}" target="_blank">
+      ${item.nome} - ${item.persona}
+    </a>
+  `;
 
-  vendite[piattaforma].forEach(item => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-
-    card.innerHTML = `
-      <a href="${item.link}" target="_blank">
-        ${item.nome} - ${item.persona}
-      </a>
-    `;
-
-    div.appendChild(card);
-  });
-
-  venditeContainer.appendChild(div);
-}
+  acquistiContainer.appendChild(card);
 });
