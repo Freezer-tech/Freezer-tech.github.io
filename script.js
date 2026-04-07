@@ -44,6 +44,7 @@ for (let piattaforma in vendite) {
     document.getElementById(id).scrollIntoView({
       behavior: "smooth"
     });
+    link.blur();
   });
 
   dropdown.appendChild(link);
