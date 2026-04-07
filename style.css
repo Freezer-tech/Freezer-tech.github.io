@@ -42,11 +42,16 @@ body {
   display: none;
   position: absolute;
   background: #222;
-  min-width: 180px;
+  /* min-width: 180px; 
   top: 100%;
-  left: 0;
+  left: 0; */
   border-radius: 5px;
-  overflow: hidden;
+  padding: 10px;
+   /* overflow: hidden; */
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
 }
 
 .dropdown-content a {
