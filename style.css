@@ -33,6 +33,40 @@ body {
   color: #00bcd4; 
 }
 
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* hover rosso */
+.dropdown-content a:hover {
+  background: #333;
+  color: red;
+}
+
+/* mostra dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* CONTAINER */
 .container {
   padding: 20px;
