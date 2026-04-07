@@ -1,2 +1,62 @@
-body { margin: 0; font-family: Arial; background: #f4f4f4; } /* NAVBAR */ .navbar { display: flex; justify-content: space-between; background: #111; color: white; padding: 15px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); } .navbar nav { display: flex; } .navbar a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; transition: color 0.3s; } .navbar a:hover { color: #00bcd4; } /* CONTAINER */ .container { padding: 20px; } /* CARD */ .card { background: white; padding: 10px; margin: 5px 0; border-radius: 6px; } /* PLATFORM */ .platform { margin-bottom: 20px; } .platform h3 { background: #ddd; padding: 8px; border-radius: 5px; }
+body { 
+  margin: 0; 
+  font-family: Arial; 
+  background: #f4f4f4; 
+} 
+
+/* NAVBAR */ 
+
+.navbar { 
+  display: flex; 
+  justify-content: space-between; 
+  background: #111; 
+  color: white; 
+  padding: 15px 20px; 
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); 
+} 
+
+.navbar nav { 
+  display: flex; } 
+
+.navbar a { 
+  color: white; 
+  margin-left: 20px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: color 0.3s; 
+} 
+
+.navbar a:hover { 
+  color: #00bcd4; 
+} 
+
+/* CONTAINER */ 
+
+.container { 
+  padding: 20px; 
+} 
+
+/* CARD */ 
+
+.card { 
+  background: white; 
+  padding: 10px; 
+  margin: 5px 0; 
+  border-radius: 6px; 
+
+} 
+
+/* PLATFORM */ 
+
+.platform { 
+  margin-bottom: 20px; 
+} 
+
+.platform h3 { 
+  background: #ddd; 
+  padding: 8px; 
+  border-radius: 5px; 
+}
 
