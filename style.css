@@ -1,117 +1,57 @@
-body {
-  margin: 0;
-  font-family: Arial;
-  background: #f4f4f4;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  background: #111;
-  color: white;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-
-.navbar nav {
-  display: flex;
-  align-items: center;
-}
-
-.navbar a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.navbar a:hover {
-  color: #00bcd4;
-}
-
-/* =========================
-   DROPDOWN
-========================= */
+/* DROPDOWN */
 .dropdown {
   position: relative;
 }
 
-/* menu nascosto */
 .dropdown-content {
   display: none;
   position: absolute;
+  background: #222;
   top: 100%;
   left: 0;
-  background: #222;
   min-width: 180px;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  z-index: 999;
 }
 
-/* menu visibile */
 .dropdown.open .dropdown-content {
   display: block;
 }
 
-/* link dentro menu */
 .dropdown-content a {
   display: block;
   padding: 10px;
   color: white;
   text-decoration: none;
-  border-radius: 3px;
-  transition: all 0.2s;
 }
 
-/* hover piattaforme */
+/* hover rosso */
 .dropdown-content a:hover {
   background: #333;
   color: red;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-.container {
-  padding: 20px;
-}
+/* CONTAINER */ 
 
-/* =========================
-   CARD
-========================= */
-.card {
-  background: white;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 6px;
-}
+.container { padding: 20px; } 
 
-/* =========================
-   PLATFORM
-========================= */
-.platform {
-  margin-bottom: 20px;
-}
+/* CARD */ 
 
-.platform h3 {
-  background: #ddd;
-  padding: 8px;
+.card { 
+  background: white; 
+  padding: 10px; 
+  margin: 5px 0; 
+  border-radius: 6px; 
+} 
+/* PLATFORM */ 
+.platform { 
+  margin-bottom: 20px; } 
+
+.platform h3 { 
+  background: #ddd; 
+  padding: 8px; 
   border-radius: 5px;
-}
+} 
 
-/* =========================
-   SCROLL SMOOTH
-========================= */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
