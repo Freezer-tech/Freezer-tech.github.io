@@ -1,15 +1,26 @@
 const venditeContainer = document.getElementById("vendite-container");
 const acquistiContainer = document.getElementById("acquisti-container");
 const dropdown = document.getElementById("dropdown-vendite");
+const venditeMenu = document.querySelector(".dropdown");
 
 /* =========================
-   VENDITE + ID piattaforme
+   TOGGLE MENU (click)
+========================= */
+venditeMenu.addEventListener("click", (e) => {
+  // evita che il click sui link richiuda subito
+  if (e.target.tagName !== "A") {
+    venditeMenu.classList.toggle("open");
+  }
+});
+
+/* =========================
+   VENDITE + DROPDOWN
 ========================= */
 for (let piattaforma in vendite) {
   const div = document.createElement("div");
   div.classList.add("platform");
 
-  // ID per scroll (IMPORTANTE)
+  // ID per scroll
   const id = "platform-" + piattaforma.replace(/\s+/g, "-");
   div.id = id;
 
@@ -33,7 +44,7 @@ for (let piattaforma in vendite) {
 
   venditeContainer.appendChild(div);
 
-  /* DROPDOWN  */
+  /* ===== LINK DROPDOWN ===== */
   const link = document.createElement("a");
   link.textContent = piattaforma;
   link.href = "#" + id;
@@ -44,13 +55,17 @@ for (let piattaforma in vendite) {
     document.getElementById(id).scrollIntoView({
       behavior: "smooth"
     });
-    link.blur();
+
+    // 👇 chiude menu dopo click
+    venditeMenu.classList.remove("open");
   });
 
   dropdown.appendChild(link);
 }
 
-/* ACQUISTI */
+/* =========================
+   ACQUISTI
+========================= */
 acquisti.forEach(item => {
   const card = document.createElement("div");
   card.classList.add("card");
