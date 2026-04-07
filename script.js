@@ -1,26 +1,15 @@
 const venditeContainer = document.getElementById("vendite-container");
 const acquistiContainer = document.getElementById("acquisti-container");
 const dropdown = document.getElementById("dropdown-vendite");
-const venditeMenu = document.querySelector(".dropdown");
 
 /* =========================
-   TOGGLE MENU (click)
-========================= */
-venditeMenu.addEventListener("click", (e) => {
-  // evita che il click sui link richiuda subito
-  if (e.target.tagName !== "A") {
-    venditeMenu.classList.toggle("open");
-  }
-});
-
-/* =========================
-   VENDITE + DROPDOWN
+   VENDITE + ID piattaforme
 ========================= */
 for (let piattaforma in vendite) {
   const div = document.createElement("div");
   div.classList.add("platform");
 
-  // ID per scroll
+  // ID per scroll (IMPORTANTE)
   const id = "platform-" + piattaforma.replace(/\s+/g, "-");
   div.id = id;
 
@@ -44,7 +33,9 @@ for (let piattaforma in vendite) {
 
   venditeContainer.appendChild(div);
 
-  /* ===== LINK DROPDOWN ===== */
+  /* =========================
+     CREAZIONE DROPDOWN
+  ========================= */
   const link = document.createElement("a");
   link.textContent = piattaforma;
   link.href = "#" + id;
@@ -55,9 +46,6 @@ for (let piattaforma in vendite) {
     document.getElementById(id).scrollIntoView({
       behavior: "smooth"
     });
-
-    // 👇 chiude menu dopo click
-    venditeMenu.classList.remove("open");
   });
 
   dropdown.appendChild(link);
