@@ -4,7 +4,9 @@ body {
   background: #f4f4f4;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -19,6 +21,7 @@ body {
 
 .navbar nav {
   display: flex;
+  align-items: center;
 }
 
 .navbar a {
@@ -26,59 +29,66 @@ body {
   margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
   transition: color 0.3s;
 }
 
 .navbar a:hover {
-  color: #00bcd4; 
+  color: #00bcd4;
 }
 
-/* DROPDOWN */
+/* =========================
+   DROPDOWN
+========================= */
 .dropdown {
   position: relative;
 }
 
+/* menu nascosto */
 .dropdown-content {
   display: none;
   position: absolute;
-  background: #222;
-  min-width: 180px; 
   top: 100%;
-  left: 0; 
+  left: 0;
+  background: #222;
+  min-width: 180px;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-   /* overflow: hidden; */
+  z-index: 999;
 }
 
+/* menu visibile */
 .dropdown.open .dropdown-content {
   display: block;
 }
 
+/* link dentro menu */
 .dropdown-content a {
   display: block;
   padding: 10px;
   color: white;
   text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.2s;
 }
 
-/* hover rosso */
+/* hover piattaforme */
 .dropdown-content a:hover {
   background: #333;
   color: red;
 }
 
-/* mostra dropdown 
-.dropdown:hover .dropdown-content {
-  display: block;
-} */
-
-/* CONTAINER */
+/* =========================
+   CONTAINER
+========================= */
 .container {
   padding: 20px;
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 .card {
   background: white;
   padding: 10px;
@@ -86,7 +96,9 @@ body {
   border-radius: 6px;
 }
 
-/* PLATFORM */
+/* =========================
+   PLATFORM
+========================= */
 .platform {
   margin-bottom: 20px;
 }
@@ -97,6 +109,9 @@ body {
   border-radius: 5px;
 }
 
+/* =========================
+   SCROLL SMOOTH
+========================= */
 html {
   scroll-behavior: smooth;
 }
