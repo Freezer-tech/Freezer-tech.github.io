@@ -89,8 +89,13 @@ body {
   color: red;
 }
 
-/* mostra dropdown */
+/* mostra dropdown 
 .dropdown:hover .dropdown-content {
+  display: block;
+} */
+
+/* mostra dropdown: */
+.dropdown.open .dropdown-content {
   display: block;
 }
 
