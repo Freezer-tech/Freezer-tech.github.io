@@ -18,7 +18,8 @@ body {
 } 
 
 .navbar nav { 
-  display: flex; } 
+  display: flex; 
+} 
 
 .navbar a { 
   color: white; 
@@ -30,7 +31,28 @@ body {
 
 .navbar a:hover { 
   color: #00bcd4; 
-} 
+}
+
+/* ANIMAZIONE X (Opzionale, ma fa scena) */
+.navbar.active .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.navbar.active .hamburger span:nth-child(2) { opacity: 0; }
+.navbar.active .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+
+/* --- STILE HAMBURGER (Nascosto su Desktop) --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1100; /* Sopra tutto */
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
 
 /* CONTAINER */ 
 
@@ -105,23 +127,44 @@ html {
 }
 
 @media (max-width: 600px) {
+  .hamburger {
+    display: flex; /* Appare su mobile */
+  }
   .navbar {
     flex-direction: column; /* Logo sopra, menu sotto */
     align-items: center;
     gap: 10px;
   }
+/* Trasformiamo il NAV in un menu a tendina verticale */
   .navbar nav {
-    margin-left: 0;
-    font-size: 14px;
+    display: none; /* Nascondi il menu di default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Si apre subito sotto la navbar nera */
+    left: 0;
+    width: 100%;
+    background: #111;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  }
+
+  /* Quando la navbar ha classe active, mostriamo il menu */
+  .navbar.active nav {
+    display: flex;
   }
   .navbar a {
-    margin: 0 10px;
+    margin: 15px 0;
+    display:block;
+  }
 
   .dropdown-content {
     position: static; /* Sotto mobile, il menu sposta il contenuto invece di sovrapporsi */
     width: 100%;
     box-shadow: none;
     background: #222;
+    border-left: 4px solid #00bcd4; /* Una linea colorata a sinistra */
+    padding-left: 20px;            /* Sposta i link un po' a destra */
   }
 }
 
