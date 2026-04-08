@@ -2,94 +2,106 @@ const venditeContainer = document.getElementById("vendite-container");
 const acquistiContainer = document.getElementById("acquisti-container");
 const dropdown = document.getElementById("dropdown-vendite");
 const venditeMenu = document.querySelector(".dropdown");
+const hamburger = document.getElementById("hamburger");
+const navbar = document.querySelector(".navbar");
 
 /* =============================================
-   GESTIONE APERTURA/CHIUSURA DROPDOWN
+   1. LOGICA MENU (HAMBURGER E DROPDOWN)
    ============================================= */
 
-venditeMenu.addEventListener("click", (e) => {
-  // Se clicco sul link "Vendite" (che ha classe dropbtn)
-  if (e.target.classList.contains("dropbtn")) {
-    // e.preventDefault(); // Opzionale: decommenta se NON vuoi che la pagina salti alla sezione vendite al primo click
-    venditeMenu.classList.toggle("open");
-    e.stopPropagation(); 
+// Toggle Hamburger (Mobile)
+if (hamburger) {
+  hamburger.addEventListener("click", (e) => {
+    navbar.classList.toggle("active");
+    e.stopPropagation();
+  });
+}
+
+// Toggle Dropdown Vendite
+if (venditeMenu) {
+  venditeMenu.addEventListener("click", (e) => {
+    if (e.target.classList.contains("dropbtn")) {
+      venditeMenu.classList.toggle("open");
+      e.stopPropagation();
+    }
+  });
+}
+
+// Chiusura universale al click fuori
+window.addEventListener("click", (e) => {
+  // Chiude hamburger se clicchi fuori
+  if (navbar && !navbar.contains(e.target)) {
+    navbar.classList.remove("active");
   }
-});
-
-// CHIUSURA AUTOMATICA: Se clicco fuori dal menu
-window.addEventListener("click", () => {
-  venditeMenu.classList.remove("open");
-});
-
-// CHIUSURA DOPO CLICK SU UN LINK DEL MENU (le piattaforme)
-dropdown.addEventListener("click", (e) => {
-  if (e.target.tagName === "A") {
+  // Chiude dropdown se clicchi fuori
+  if (venditeMenu && !venditeMenu.contains(e.target)) {
     venditeMenu.classList.remove("open");
   }
 });
 
-
-/* =========================
-   VENDITE + ID piattaforme
-========================= */
-for (let piattaforma in vendite) {
-  const div = document.createElement("div");
-  div.classList.add("platform");
-
-  // ID per scroll (IMPORTANTE)
-  const id = "platform-" + piattaforma.replace(/\s+/g, "-");
-  div.id = id;
-
-  const title = document.createElement("h3");
-  title.textContent = piattaforma;
-
-  div.appendChild(title);
-
-  vendite[piattaforma].forEach(item => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-
-    card.innerHTML = `
-      <a href="${item.link}" target="_blank">
-        ${item.nome ?? ""} - ${item.persona}
-      </a>
-    `;
-
-    div.appendChild(card);
+// Chiude tutto quando clicchi un link
+document.querySelectorAll(".navbar nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    if (venditeMenu) venditeMenu.classList.remove("open");
   });
+});
 
-  venditeContainer.appendChild(div);
 
-  /* =========================
-     CREAZIONE DROPDOWN
-  ========================= */
-  const link = document.createElement("a");
-  link.textContent = piattaforma;
-  link.href = "#" + id;
+/* =============================================
+   2. POPOLAMENTO DATI VENDITE
+   ============================================= */
+if (venditeContainer) {
+  for (let piattaforma in vendite) {
+    const div = document.createElement("div");
+    div.classList.add("platform");
 
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
+    const id = "platform-" + piattaforma.replace(/\s+/g, "-");
+    div.id = id;
 
-    document.getElementById(id).scrollIntoView({
-      behavior: "smooth"
+    const title = document.createElement("h3");
+    title.textContent = piattaforma;
+    div.appendChild(title);
+
+    vendite[piattaforma].forEach(item => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.innerHTML = `
+        <a href="${item.link}" target="_blank">
+          ${item.nome ?? ""} - ${item.persona}
+        </a>
+      `;
+      div.appendChild(card);
     });
-  });
 
-  dropdown.appendChild(link);
+    venditeContainer.appendChild(div);
+
+    // Creazione link nel dropdown
+    if (dropdown) {
+      const link = document.createElement("a");
+      link.textContent = piattaforma;
+      link.href = "#" + id;
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      });
+      dropdown.appendChild(link);
+    }
+  }
 }
 
-/* =========================
-   ACQUISTI
-========================= */
-acquisti.forEach(item => {
-  const card = document.createElement("div");
-  card.classList.add("card");
-
-  card.innerHTML = `
-    <a href="${item.link}" target="_blank">
-      ${item.nome} - ${item.persona}
-    </a>
-  `;
-
-  acquistiContainer.appendChild(card);
-});
+/* =============================================
+   3. POPOLAMENTO DATI ACQUISTI
+   ============================================= */
+if (acquistiContainer) {
+  acquisti.forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML = `
+      <a href="${item.link}" target="_blank">
+        ${item.nome} - ${item.persona}
+      </a>
+    `;
+    acquistiContainer.appendChild(card);
+  });
+}
