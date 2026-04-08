@@ -116,6 +116,12 @@ html {
   }
   .navbar a {
     margin: 0 10px;
+
+  .dropdown-content {
+    position: static; /* Sotto mobile, il menu sposta il contenuto invece di sovrapporsi */
+    width: 100%;
+    box-shadow: none;
+    background: #222;
   }
 }
 
