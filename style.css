@@ -94,3 +94,23 @@ body {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Altezza della navbar + un po' di margine */
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Logo sopra, menu sotto */
+    align-items: center;
+    gap: 10px;
+  }
+  .navbar nav {
+    margin-left: 0;
+    font-size: 14px;
+  }
+  .navbar a {
+    margin: 0 10px;
+  }
+}
+
