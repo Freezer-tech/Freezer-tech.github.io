@@ -8,29 +8,26 @@ const venditeMenu = document.querySelector(".dropdown");
    ============================================= */
 
 venditeMenu.addEventListener("click", (e) => {
-  // Se clicco sul link principale (quello che dice "Vendite" o simile)
-  // o sul contenitore, inverto la classe 'open'
-  if (e.target.tagName !== "A" || e.target.classList.contains("dropbtn")) {
+  // Se clicco sul link "Vendite" (che ha classe dropbtn)
+  if (e.target.classList.contains("dropbtn")) {
+    // e.preventDefault(); // Opzionale: decommenta se NON vuoi che la pagina salti alla sezione vendite al primo click
     venditeMenu.classList.toggle("open");
-    // Impedisce al click di propagarsi e chiudere subito se avessimo altri eventi
     e.stopPropagation(); 
   }
 });
 
-// CHIUSURA AUTOMATICA: Se l'utente clicca fuori dal menu, lo chiudiamo
+// CHIUSURA AUTOMATICA: Se clicco fuori dal menu
 window.addEventListener("click", () => {
-  if (venditeMenu.classList.contains("open")) {
-    venditeMenu.classList.remove("open");
-  }
+  venditeMenu.classList.remove("open");
 });
 
-// CHIUSURA DOPO CLICK SU LINK: 
-// Dato che i tuoi link sono creati dinamicamente, usiamo la delegazione
+// CHIUSURA DOPO CLICK SU UN LINK DEL MENU (le piattaforme)
 dropdown.addEventListener("click", (e) => {
   if (e.target.tagName === "A") {
     venditeMenu.classList.remove("open");
   }
 });
+
 
 /* =========================
    VENDITE + ID piattaforme
