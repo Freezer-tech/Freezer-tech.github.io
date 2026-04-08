@@ -9,7 +9,7 @@ const navbar = document.querySelector(".navbar");
    1. LOGICA MENU (HAMBURGER E DROPDOWN)
    ============================================= */
 
-// Toggle Hamburger (Mobile)
+// Toggle Hamburger
 if (hamburger) {
   hamburger.addEventListener("click", (e) => {
     navbar.classList.toggle("active");
@@ -20,7 +20,12 @@ if (hamburger) {
 // Toggle Dropdown Vendite
 if (venditeMenu) {
   venditeMenu.addEventListener("click", (e) => {
+    // Apriamo/chiudiamo solo se clicchiamo sul tasto "Vendite"
     if (e.target.classList.contains("dropbtn")) {
+      // Se siamo su mobile, evitiamo che il click sul link faccia saltare la pagina
+      if (window.innerWidth <= 600) {
+        e.preventDefault();
+      }
       venditeMenu.classList.toggle("open");
       e.stopPropagation();
     }
@@ -29,21 +34,19 @@ if (venditeMenu) {
 
 // Chiusura universale al click fuori
 window.addEventListener("click", (e) => {
-  // Chiude hamburger se clicchi fuori
   if (navbar && !navbar.contains(e.target)) {
     navbar.classList.remove("active");
   }
-  // Chiude dropdown se clicchi fuori
   if (venditeMenu && !venditeMenu.contains(e.target)) {
     venditeMenu.classList.remove("open");
   }
 });
 
-// Chiude tutto quando clicchi un link
-document.querySelectorAll(".navbar nav a").forEach(link => {
+// Chiude l'hamburger quando clicchi "Home" o "Acquisti" 
+// (ma NON quando clicchi "Vendite", altrimenti il sottomenu sparisce subito)
+document.querySelectorAll(".navbar nav > a:not(.dropbtn)").forEach(link => {
   link.addEventListener("click", () => {
     navbar.classList.remove("active");
-    if (venditeMenu) venditeMenu.classList.remove("open");
   });
 });
 
@@ -81,9 +84,19 @@ if (venditeContainer) {
       const link = document.createElement("a");
       link.textContent = piattaforma;
       link.href = "#" + id;
+      
       link.addEventListener("click", (e) => {
         e.preventDefault();
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        
+        // 1. Chiude i menu
+        navbar.classList.remove("active");
+        venditeMenu.classList.remove("open");
+
+        // 2. Scroll fluido
+        const targetElement = document.getElementById(id);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
       });
       dropdown.appendChild(link);
     }
