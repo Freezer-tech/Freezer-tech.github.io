@@ -1,6 +1,36 @@
 const venditeContainer = document.getElementById("vendite-container");
 const acquistiContainer = document.getElementById("acquisti-container");
 const dropdown = document.getElementById("dropdown-vendite");
+const venditeMenu = document.querySelector(".dropdown");
+
+/* =============================================
+   GESTIONE APERTURA/CHIUSURA DROPDOWN
+   ============================================= */
+
+venditeMenu.addEventListener("click", (e) => {
+  // Se clicco sul link principale (quello che dice "Vendite" o simile)
+  // o sul contenitore, inverto la classe 'open'
+  if (e.target.tagName !== "A" || e.target.classList.contains("dropbtn")) {
+    venditeMenu.classList.toggle("open");
+    // Impedisce al click di propagarsi e chiudere subito se avessimo altri eventi
+    e.stopPropagation(); 
+  }
+});
+
+// CHIUSURA AUTOMATICA: Se l'utente clicca fuori dal menu, lo chiudiamo
+window.addEventListener("click", () => {
+  if (venditeMenu.classList.contains("open")) {
+    venditeMenu.classList.remove("open");
+  }
+});
+
+// CHIUSURA DOPO CLICK SU LINK: 
+// Dato che i tuoi link sono creati dinamicamente, usiamo la delegazione
+dropdown.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    venditeMenu.classList.remove("open");
+  }
+});
 
 /* =========================
    VENDITE + ID piattaforme
