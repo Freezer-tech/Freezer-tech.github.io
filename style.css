@@ -151,6 +151,9 @@ html {
     margin-left: 0; /* Rimuove margine sinistro su mobile */
     font-size: 18px;
   }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
   .dropdown-content {
     position: static; /* Sposta il contenuto invece di sovrapporsi */
@@ -161,10 +164,18 @@ html {
     padding: 5px 0; /* Centrato */
   }
   .dropdown-content a {
-    margin: 0 !important; /* Rimuove i margini grandi dei link principali */
     padding: 8px 0 !important;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: #222;
+    border-bottom: 1px solid #333;
+    margin: 0 !important; /* Rimuove i margini grandi dei link principali */
     font-size: 14px !important; /* Testo più piccolo per le piattaforme */
     font-weight: normal; /* Meno pesante rispetto a Vendite/Home */
     color: #bbb; /* Grigio chiaro invece di bianco puro */
   }
+  .dropdown-content a:hover {
+    background-color: #00bcd4;
+    color: black;
 }
