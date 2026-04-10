@@ -17,14 +17,14 @@ if (hamburger) {
   });
 }
 
-// Toggle Dropdown Vendite
+// Toggle Dropdown Transazioni
 if (venditeMenu) {
   venditeMenu.addEventListener("click", (e) => {
-    // Apriamo/chiudiamo solo se clicchiamo sul tasto "Vendite"
+    // Se clicco sulla scritta "Transazioni"
     if (e.target.classList.contains("dropbtn")) {
-      // Se siamo su mobile, evitiamo che il click sul link faccia saltare la pagina
+      // Su mobile impedisce il salto pagina immediato per permettere l'apertura
       if (window.innerWidth <= 600) {
-        e.preventDefault();
+        e.preventDefault(); 
       }
       venditeMenu.classList.toggle("open");
       e.stopPropagation();
@@ -32,7 +32,7 @@ if (venditeMenu) {
   });
 }
 
-// Chiusura universale al click fuori
+// Chiusura universale
 window.addEventListener("click", (e) => {
   if (navbar && !navbar.contains(e.target)) {
     navbar.classList.remove("active");
@@ -42,9 +42,8 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// Chiude l'hamburger quando clicchi "Home" o "Acquisti" 
-// (ma NON quando clicchi "Vendite", altrimenti il sottomenu sparisce subito)
-document.querySelectorAll(".navbar nav > a:not(.dropbtn)").forEach(link => {
+// Chiude l'hamburger solo se clicchi link diretti (Home o Chi sono)
+document.querySelectorAll(".navbar nav > a").forEach(link => {
   link.addEventListener("click", () => {
     navbar.classList.remove("active");
   });
