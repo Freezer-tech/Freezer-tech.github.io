@@ -1,6 +1,6 @@
 const venditeContainer = document.getElementById("vendite-container");
 const acquistiContainer = document.getElementById("acquisti-container");
-const dropdown = document.getElementById("dropdown-vendite");
+const dropdown = document.getElementById("dropdown-content");
 const venditeMenu = document.querySelector(".dropdown");
 const hamburger = document.getElementById("hamburger");
 const navbar = document.querySelector(".navbar");
