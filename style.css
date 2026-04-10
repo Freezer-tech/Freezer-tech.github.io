@@ -62,12 +62,16 @@ html {
   transition: 0.3s;
 }
 
+.dropdown {
+  position: relative; 
+  display: inline-block; 
+}
+
 /* Animazione X */
 .navbar.active .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .navbar.active .hamburger span:nth-child(2) { opacity: 0; }
 .navbar.active .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
 
-/* Mostra al passaggio del mouse su Desktop */
 @media (min-width: 601px) {
   .dropdown:hover .dropdown-content {
     display: block;
@@ -80,7 +84,7 @@ html {
   background: #222;
   min-width: 180px;
   top: 100%;
-  left: 0;
+  left: 20px;
   border-radius: 5px;
   z-index: 2000;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
@@ -119,6 +123,7 @@ html {
     width: 100%;
     background: #111;
     padding: 10px 0;
+    text-align: left;
   }
 
   .navbar.active nav { display: flex; }
@@ -126,8 +131,8 @@ html {
   .navbar a {
     margin: 10px 0;
     display: block;
-    width: 100%;
-    margin-left: 0;
+    width: auto;
+    margin-left: 20px;
   }
 
   .dropdown-content {
@@ -143,5 +148,6 @@ html {
     text-align: left;
     color: #bbb;
     border-bottom: 1px solid #222;
+    margin-left: 0 !important;
   }
 }
