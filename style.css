@@ -67,9 +67,11 @@ html {
 .navbar.active .hamburger span:nth-child(2) { opacity: 0; }
 .navbar.active .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
 
-/* --- DROPDOWN (Desktop) --- */
-.dropdown {
-  position: relative;
+/* Mostra al passaggio del mouse su Desktop */
+@media (min-width: 601px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 }
 
 .dropdown-content {
@@ -80,53 +82,36 @@ html {
   top: 100%;
   left: 0;
   border-radius: 5px;
-  overflow: hidden;
+  z-index: 2000;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
+/* Mostra con click (gestito da JS o per sicurezza) */
 .dropdown.open .dropdown-content {
   display: block;
 }
 
 .dropdown-content a {
   display: block;
-  padding: 10px;
+  padding: 12px 15px;
   color: white;
-  margin-left: 0; /* Reset del margine della navbar */
+  margin-left: 0 !important;
+  font-size: 14px;
+  border-bottom: 1px solid #333;
 }
 
+/* Colore Rosso su Hover */
 .dropdown-content a:hover {
   background: #333;
-  color: #ff4444; /* Rosso */
-}
-
-/* --- CONTENUTI (Card & Platform) --- */
-.container { padding: 20px; }
-
-.platform { margin-bottom: 20px; }
-
-.platform h3 { 
-  background: #ddd; 
-  padding: 8px; 
-  border-radius: 5px; 
-}
-
-.card { 
-  background: white; 
-  padding: 10px; 
-  margin: 5px 0; 
-  border-radius: 6px; 
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  color: #ff4444 !important; 
 }
 
 /* --- MOBILE (Sotto i 600px) --- */
 @media (max-width: 600px) {
-  .hamburger {
-    display: flex; /* Appare l'hamburger */
-  }
+  .hamburger { display: flex; }
 
   .navbar nav {
-    display: none; /* Nasconde menu orizzontale */
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -134,48 +119,29 @@ html {
     width: 100%;
     background: #111;
     padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-    max-height: 80vh; 
-    overflow-y: auto;
   }
 
-  .navbar.active nav {
-    display: flex; /* Mostra menu verticale al click */
-  }
+  .navbar.active nav { display: flex; }
 
   .navbar a {
     margin: 10px 0;
     display: block;
     width: 100%;
-    margin-left: 0; /* Rimuove margine sinistro su mobile */
-    font-size: 18px;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
+    margin-left: 0;
   }
 
   .dropdown-content {
-    position: static; /* Sposta il contenuto invece di sovrapporsi */
+    position: static;
     width: 100%;
-    box-shadow: none;
     background: #1a1a1a;
     border-left: 4px solid #00bcd4;
-    padding: 5px 0; /* Centrato */
+    padding: 5px 0;
   }
+
   .dropdown-content a {
-    padding: 8px 0 !important;
-    text-decoration: none;
-    display: block;
+    padding: 12px 25px !important; /* Più respiro a sinistra */
     text-align: left;
-    background-color: #222;
-    border-bottom: 1px solid #333;
-    margin: 0 !important; /* Rimuove i margini grandi dei link principali */
-    font-size: 14px !important; /* Testo più piccolo per le piattaforme */
-    font-weight: normal; /* Meno pesante rispetto a Vendite/Home */
-    color: #bbb; /* Grigio chiaro invece di bianco puro */
+    color: #bbb;
+    border-bottom: 1px solid #222;
   }
-  .dropdown-content a:hover {
-    background-color: #00bcd4;
-    color: black;
 }
