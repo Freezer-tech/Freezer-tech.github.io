@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Storico certificato delle compravendite hardware di Freezer Tech">
     <title>Freezer Tech - Home</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="navbar">
-  <div class="logo">Freezer Tech</div>
+    <div class="logo">Freezer Tech</div>
 
-  <div class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </div>  
-<nav id="nav-menu">
-  <a href="index.html">Home</a>
-  <div class="dropdown">
-    <a href="transazioni.html" class="dropbtn">Transazioni</a>
-    <div class="dropdown-content" id="dropdown-vendite">
-      <a href="transazioni.html#acquisti">Acquisti</a>
-      <a href="transazioni.html#vendite">Vendite</a>
-      <a href="transazioni.html#scambi">Scambi</a>
-    </div>
-  </div>
-  <a href="chi-sono.html">Chi sono</a>
-</nav>
+    <!-- Bottone hamburger più accessibile -->
+    <button class="hamburger" id="hamburger" aria-label="Apri menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>  
+
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+            <a href="transazioni.html" class="dropbtn">Transazioni</a>
+            <div class="dropdown-content">
+                <a href="transazioni.html#acquisti">Acquisti</a>
+                <a href="transazioni.html#vendite">Vendite</a>
+                <a href="transazioni.html#scambi">Scambi</a>
+            </div>
+        </div>
+
+        <a href="chi-sono.html">Chi sono</a>
+    </nav>
 </header>
 
 <main class="container">
     <section id="home">
         <h1>Benvenuti su Freezer Tech</h1>
-        <p>Questo portale raccoglie lo storico certificato di tutte le mie compravendite hardware.</p>
-        <p>Per consultare l'elenco completo, visita la sezione <strong><a href="transazioni.html" style="color: #00bcd4; text-decoration: none;">Transazioni</a></strong>.</p>
+        
+        <p>
+            Questo portale raccoglie lo storico certificato di tutte le mie compravendite hardware.
+        </p>
+
+        <p>
+            Per consultare l'elenco completo, visita la sezione 
+            <strong>
+                <a href="transazioni.html" class="link-highlight">Transazioni</a>
+            </strong>.
+        </p>
     </section>
-    
-    </main>
+</main>
+
+<footer>
+    <p>
+        Visite:
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=freezer-tech.github.io/" alt="Contatore visite">
+    </p>
+</footer>
 
 <script src="data.js"></script>
 <script src="script.js"></script>
-
-<footer>
-    <p>Visite: <img src="https://visitor-badge.laobi.icu/badge?page_id=freezer-tech.github.io/" alt="Visite"></p>
-</footer>
 
 </body>
 </html>
