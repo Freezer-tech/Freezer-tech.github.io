@@ -182,7 +182,8 @@ const vendite = {
     { nome: "Maglia maniche lunghe", persona: "Sara", link: "https://www.vinted.it/member/79451823" },
     { nome: "Cinturino per Xiaomi MI Band 10 9 8", persona: "Andrea", link: "https://www.vinted.it/member/313853158" },
     { nome: "Parkside Multi-Purpose Detector", persona: "Ariabella", link: "https://www.vinted.it/member/50497145" },
-    { nome: "Camicia bianca Ovs Slim", persona: "Martin", link: "https://www.vinted.it/member/121757929" }
+    { nome: "Camicia bianca Ovs Slim", persona: "Martin", link: "https://www.vinted.it/member/121757929" },
+    { nome: "Waterproof Case for Phone Holder for Bike", persona: "Carlotta", link: "https://www.vinted.it/member/69000542" }
 ],
 
   "Wallapop": [
