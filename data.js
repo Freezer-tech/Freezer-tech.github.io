@@ -183,7 +183,11 @@ const vendite = {
     { nome: "Cinturino per Xiaomi MI Band 10 9 8", persona: "Andrea", link: "https://www.vinted.it/member/313853158" },
     { nome: "Parkside Multi-Purpose Detector", persona: "Ariabella", link: "https://www.vinted.it/member/50497145" },
     { nome: "Camicia bianca Ovs Slim", persona: "Martin", link: "https://www.vinted.it/member/121757929" },
-    { nome: "Waterproof Case for Phone Holder for Bike", persona: "Carlotta", link: "https://www.vinted.it/member/69000542" }
+    { nome: "Waterproof Case for Phone Holder for Bike", persona: "Carlotta", link: "https://www.vinted.it/member/69000542" },
+    { nome: "Top Zara", persona: "nonnamilla65", link:"https://www.vinted.it/member/169601538"},
+    { nome:"Se i gatti scomparissero dal mondo - Kawamura Genki", persona: "franci", link: "https://www.vinted.it/member/70483710"},
+    { nome:"t-shirt Sisley con spacco", persona: "Sarah", link: "https://www.vinted.it/member/57431780"}
+    
 ],
 
   "Wallapop": [
