@@ -10,7 +10,7 @@ const navbar = document.querySelector(".navbar");
    ============================================= */
 
 // Toggle Hamburger
-if (hamburger) {
+if (hamburger && navbar) {
   hamburger.addEventListener("click", (e) => {
     navbar.classList.toggle("active");
     e.stopPropagation();
@@ -46,15 +46,34 @@ window.addEventListener("click", (e) => {
 // (ma NON quando clicchi "Vendite", altrimenti il sottomenu sparisce subito)
 document.querySelectorAll(".navbar nav > a:not(.dropbtn)").forEach(link => {
   link.addEventListener("click", () => {
-    navbar.classList.remove("active");
+   if (navbar) navbar.classList.remove("active");
   });
 });
 
 /* =============================================
-   2. POPOLAMENTO DATI VENDITE
+   2. FUNZIONE SICURA PER CREARE LINK
    ============================================= */
 
-if (venditeContainer) {
+function creaLink(item) {
+  const link = document.createElement("a");
+
+  link.href = item.link || "#";
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+
+  const nome = item.nome ?? "";
+  const persona = item.persona ?? "";
+
+  link.textContent = `${nome} - ${persona}`;
+
+  return link;
+}
+
+/* =============================================
+   3. POPOLAMENTO DATI VENDITE
+   ============================================= */
+
+if (venditeContainer && typeof vendite !== "undefined") {
   for (let piattaforma in vendite) {
     const div = document.createElement("div");
     div.classList.add("platform");
@@ -69,11 +88,10 @@ if (venditeContainer) {
     vendite[piattaforma].forEach(item => {
       const card = document.createElement("div");
       card.classList.add("card");
-      card.innerHTML = `
-        <a href="${item.link}" target="_blank">
-          ${item.nome ?? ""} - ${item.persona}
-        </a>
-      `;
+      
+      const link = creaLink(item);
+      card.appendChild(link);
+       
       div.appendChild(card);
     });
 
@@ -81,7 +99,7 @@ if (venditeContainer) {
 
     // Creazione link nel dropdown
     if (dropdown) {
-      const link = document.createElement("a");
+      const linkMenu = document.createElement("a");
       link.textContent = piattaforma;
       link.href = "#" + id;
       
@@ -89,17 +107,17 @@ if (venditeContainer) {
         e.preventDefault();
         
         // 1. Chiude i menu
-        navbar.classList.remove("active");
-        venditeMenu.classList.remove("open");
+        if (navbar) navbar.classList.remove("active");
+        if (venditeMenu) venditeMenu.classList.remove("open");
 
         // 2. Scroll fluido
-        const targetElement = document.getElementById(id);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
+         const target = document.getElementById(id);
+         if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
         }
       });
 
-      dropdown.appendChild(link);
+      dropdown.appendChild(linkMenu);
     }
   }
 }
@@ -108,15 +126,13 @@ if (venditeContainer) {
    3. POPOLAMENTO DATI ACQUISTI
    ============================================= */
 
-if (acquistiContainer) {
+if (acquistiContainer && typeof acquisti !== "undefined") {
   acquisti.forEach(item => {
     const card = document.createElement("div");
     card.classList.add("card");
-    card.innerHTML = `
-      <a href="${item.link}" target="_blank">
-        ${item.nome} - ${item.persona}
-      </a>
-    `;
+    
+     const link = creaLink(item);
+    card.appendChild(link);
 
     acquistiContainer.appendChild(card);
   });
