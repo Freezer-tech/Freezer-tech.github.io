@@ -100,10 +100,11 @@ if (venditeContainer && typeof vendite !== "undefined") {
     // Creazione link nel dropdown
     if (dropdown) {
       const linkMenu = document.createElement("a");
-      link.textContent = piattaforma;
-      link.href = "#" + id;
+       
+      linkMenu.textContent = piattaforma;
+      linkMenu.href = "#" + id;
       
-      link.addEventListener("click", (e) => {
+      linkMenu.addEventListener("click", (e) => {
         e.preventDefault();
         
         // 1. Chiude i menu
@@ -123,7 +124,7 @@ if (venditeContainer && typeof vendite !== "undefined") {
 }
 
 /* =============================================
-   3. POPOLAMENTO DATI ACQUISTI
+   4. POPOLAMENTO DATI ACQUISTI
    ============================================= */
 
 if (acquistiContainer && typeof acquisti !== "undefined") {
