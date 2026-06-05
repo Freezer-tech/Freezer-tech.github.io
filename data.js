@@ -88,7 +88,8 @@ const vendite = {
     { nome: "Nikon Coolpix E5600", persona: "Vania", link: "https://www.subito.it/utente/120593002" },
     { nome: "Cuffie Zalman ZM-RS6F", persona: "Davide", link: "https://www.subito.it/utente/15771104" },
     { nome: "Samsung Galaxy S24", persona: "Matteo", link: "https://www.subito.it/utente/16078139" },
-    { nome: "HP ProDesk 400 G3 MiniPC", persona: "Michele", link: "https://www.subito.it/utente/12923960" }
+    { nome: "HP ProDesk 400 G3 MiniPC", persona: "Michele", link: "https://www.subito.it/utente/12923960" },
+    { nome: "Controller Sony ps4 dualshock 4", persona: "Mirko", link: "https://www.subito.it/utente/15518007" }
 ],
 
   "PCTuner":[
