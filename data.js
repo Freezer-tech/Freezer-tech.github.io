@@ -186,8 +186,10 @@ const vendite = {
     { nome: "Camicia bianca Ovs Slim", persona: "Martin", link: "https://www.vinted.it/member/121757929" },
     { nome: "Waterproof Case for Phone Holder for Bike", persona: "Carlotta", link: "https://www.vinted.it/member/69000542" },
     { nome: "Top Zara", persona: "nonnamilla65", link:"https://www.vinted.it/member/169601538"},
-    { nome:"Se i gatti scomparissero dal mondo - Kawamura Genki", persona: "franci", link: "https://www.vinted.it/member/70483710"},
-    { nome:"t-shirt Sisley con spacco", persona: "Sarah", link: "https://www.vinted.it/member/57431780"}
+    { nome: "Se i gatti scomparissero dal mondo - Kawamura Genki", persona: "franci", link: "https://www.vinted.it/member/70483710"},
+    { nome: "t-shirt Sisley con spacco", persona: "Sarah", link: "https://www.vinted.it/member/57431780"},
+    { nome: "Logitech K400 Plus", persona: "Nicolò", link: "https://www.vinted.it/member/279341782"},
+    { nome: "Maglia a maniche lunghe Nike Dri Fit", persona: "Elena", link: "https://www.vinted.it/member/49867367"}
     
 ],
 
