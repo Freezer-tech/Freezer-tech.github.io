@@ -188,8 +188,12 @@ const vendite = {
     { nome: "Top Zara", persona: "nonnamilla65", link:"https://www.vinted.it/member/169601538"},
     { nome: "Se i gatti scomparissero dal mondo - Kawamura Genki", persona: "franci", link: "https://www.vinted.it/member/70483710"},
     { nome: "t-shirt Sisley con spacco", persona: "Sarah", link: "https://www.vinted.it/member/57431780"},
+    { nome: "Gonna desigual edizione limitata ", persona: "Cheng", link: "https://www.vinted.it/member/229561021"},
     { nome: "Logitech K400 Plus", persona: "Nicolò", link: "https://www.vinted.it/member/279341782"},
-    { nome: "Maglia a maniche lunghe Nike Dri Fit", persona: "Elena", link: "https://www.vinted.it/member/49867367"}
+    { nome: "Maglia a maniche lunghe Nike Dri Fit", persona: "Elena", link: "https://www.vinted.it/member/49867367"},
+    { nome: "Abito verde salvia scollo a V", persona: "Assunta", link:"https://www.vinted.it/member/3154808768"},
+    { nome: "Camicia boho a righe puro cotone", persona:"Pedro", link:"https://www.vinted.it/member/69868174"},
+    { nome: "Top/sottogiacca verde smeraldo con inserti in raso", persona:"Caterina", link:"https://www.vinted.it/member/77634995"}
     
 ],
 
