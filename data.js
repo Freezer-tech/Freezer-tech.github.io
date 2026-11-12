@@ -194,8 +194,8 @@ const vendite = {
     { nome: "Abito verde salvia scollo a V", persona: "Assunta", link:"https://www.vinted.it/member/3154808768"},
     { nome: "Camicia boho a righe puro cotone", persona:"Pedro", link:"https://www.vinted.it/member/69868174"},
     { nome: "Top/sottogiacca verde smeraldo con inserti in raso", persona:"Caterina", link:"https://www.vinted.it/member/77634995"}, 
-    { nome: "Jeans Terranova TRN1961", persona: "Dario", link:"https://www.vinted.it/member/3179259383-darimo84"}
-    
+    { nome: "Jeans Terranova TRN1961", persona: "Dario", link:"https://www.vinted.it/member/3179259383-darimo84"},
+    { nome: "Jeans nero svasato a zampa di elefante", persona:"Cassandra", link:"https://www.vinted.it/member/77119865"}
 ],
 
   "Wallapop": [
