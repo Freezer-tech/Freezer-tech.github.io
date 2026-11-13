@@ -23,9 +23,9 @@ if (venditeMenu) {
     // Apriamo/chiudiamo solo se clicchiamo sul tasto "Vendite"
     if (e.target.classList.contains("dropbtn")) {
       // Se siamo su mobile, evitiamo che il click sul link faccia saltare la pagina
-      if (window.innerWidth <= 600) {
-        e.preventDefault();
-      }
+      // if (window.innerWidth <= 600) {
+      e.preventDefault();
+      // }
       venditeMenu.classList.toggle("open");
       e.stopPropagation();
     }
