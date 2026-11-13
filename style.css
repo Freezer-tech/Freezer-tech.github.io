@@ -158,11 +158,13 @@ html {
     margin-left: 0; /* Rimuove margine sinistro su mobile */
     font-size: 18px;
   }
-
-  .dropdown:hover .dropdown-content {
+  
+  /* Apertura dropdown su desktop tramite hover e tastiera */
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
     display: block;
   }
-
+  
   .dropdown-content {
     position: static; /* Sposta il contenuto invece di sovrapporsi */
     width: 100%;
