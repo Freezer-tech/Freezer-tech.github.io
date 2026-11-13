@@ -138,3 +138,19 @@ if (acquistiContainer && typeof acquisti !== "undefined") {
     acquistiContainer.appendChild(card);
   });
 }
+
+/* =============================================
+   5. POPOLAMENTO DATI SCAMBI
+   ============================================= */
+
+if (scambiContainer && typeof scambi !== "undefined") {
+  scambi.forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    
+     const link = creaLink(item);
+    card.appendChild(link);
+
+    scambiContainer.appendChild(card);
+  });
+}
